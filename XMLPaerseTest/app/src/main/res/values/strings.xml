@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">XMLPaerseTest</string>
+    <string name="text_1">てすと</string>
+    <string name="text_2">モードを選んでください</string>
+    <string name="text_3">レジスタ0が10ならばこのテキストが表示されます</string>
+    <string name="text_4">レジスタ0が20ならばこのテキストが表示されます</string>
+    <string name="text_5">現在のレジスタ0の値は[$regist0$]です</string>
+
+
+    <string name="scene_3_branch_4">レジスタ0に10を代入</string>
+    <string name="scene_3_branch_5">レジスタ0に20を代入</string>
+
+</resources>

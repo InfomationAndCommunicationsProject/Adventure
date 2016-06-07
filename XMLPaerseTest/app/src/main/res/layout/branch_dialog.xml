@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dialogbg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="一"
+        android:id="@+id/button2"
+        android:layout_above="@+id/button1"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:visibility="invisible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="三番三番三番三番"
+        android:id="@+id/button3"
+        android:layout_below="@+id/button0"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:visibility="invisible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ｄさｆｄさｆｓｄ"
+        android:id="@+id/button0"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/button3"
+        android:layout_toStartOf="@+id/button3"
+        android:visibility="invisible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="だｆｆｄさｆｄｓｆ"
+        android:id="@+id/button1"
+        android:layout_alignTop="@+id/button0"
+        android:layout_toRightOf="@+id/button3"
+        android:layout_toEndOf="@+id/button3"
+        android:visibility="invisible" />
+
+</RelativeLayout>

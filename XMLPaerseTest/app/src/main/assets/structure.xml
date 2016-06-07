@@ -1,0 +1,32 @@
+<root>
+    <Scene id="1" image = "1" text="1" type="normal">
+        <Next id="2"/>
+    </Scene>
+    <Scene id="2" image = "2" text="2" type="normal">
+        <Next id="3"/>
+    </Scene>
+    <Scene id="3" type="branch">
+        <Next id="4"/>
+        <Next id="5"/>
+    </Scene>
+    <Scene id="4" op="Assign" regist="0" value="10" type="proc">
+        <Next id="6"/>
+    </Scene>
+    <Scene id="5" op="Assign" regist="0" value="20" type="proc">
+        <Next id="6"/>
+    </Scene>
+    <Scene id="6"  regist="0"  condition="e" type="proc_branch">
+        <Next id="7" value="10"/>
+        <Next id="8" value="20"/>
+        <Next id="9" value="0"/>
+    </Scene>
+    <Scene id="7" image = "2" text="3" type="normal">
+        <Next id="9"/>
+    </Scene>
+    <Scene id="8" image = "2" text="4" type="normal">
+        <Next id="9"/>
+    </Scene>
+    <Scene id="9" image = "2" text="5" type="normal">
+        <Next id="1"/>
+    </Scene>
+</root>
