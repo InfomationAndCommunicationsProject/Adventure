@@ -26,9 +26,8 @@ import java.util.HashMap;
  * Created by Goto on 2016/05/20.
  */
 public class Game {
-    public static int[] i_regist = new int[64];
-    public static String[] s_regist = new String[64];
-    private final static String firstScene = "1";
+    public static int[] regist = new int[128];
+    private final static String firstScene = "5";
     private Activity act;
     private HashMap<String,Scene> structureData;
     private Scene now;
@@ -92,7 +91,8 @@ public class Game {
     }
 
     public void next() {
-        cb.setChecked(now.getReadFlag());
+        if(!now.getProcSkip())
+            cb.setChecked(now.getReadFlag());
         String s;
         do{
             s = now.draw(act, this);
@@ -119,12 +119,7 @@ public class Game {
     public void debugPrintInfo(){
         String s = "";
         int n = 0;
-        for(int m : i_regist){
-            s += "["+n+":"+m +"] ";
-            n++;
-        }
-        n=0;
-        for(String m : s_regist){
+        for(int m : regist){
             s += "["+n+":"+m +"] ";
             n++;
         }

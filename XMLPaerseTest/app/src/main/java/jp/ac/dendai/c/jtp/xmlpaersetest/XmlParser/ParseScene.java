@@ -54,7 +54,8 @@ public class ParseScene {
             case "proc":
                 sc = new ProcScene(sc);
                 sc.setId(id);
-                ((ProcScene)sc).setRegistId(Integer.valueOf(getId("regist", xpp)));
+                ((ProcScene)sc).setRegistIdAssign(Integer.valueOf(getId("regist_assign", xpp)));
+                ((ProcScene)sc).setRegistIdOperand(Integer.valueOf(getId("regist_operand", xpp)));
                 ((ProcScene)sc).setOp(Operation.valueOf(getId("op", xpp)));
                 ((ProcScene)sc).setValue(Integer.valueOf(getId("value", xpp)));
                 sc.setProcSkip(true);

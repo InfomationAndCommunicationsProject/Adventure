@@ -12,7 +12,8 @@ import jp.ac.dendai.c.jtp.xmlpaersetest.Scene.Op.Operation;
  */
 public class ProcScene extends Scene {
     private Operation op;
-    private int registId;
+    private int registId_Assign;
+    private int registId_Operand;
 
     public  ProcScene(Scene sc){
         if(sc != null)
@@ -31,7 +32,7 @@ public class ProcScene extends Scene {
 
     @Override
     public String draw(Activity act, Game game) {
-        op.proc(registId,value);
+        op.proc(registId_Assign,registId_Operand,value);
         return nextId.getFirst();
     }
 
@@ -64,8 +65,11 @@ public class ProcScene extends Scene {
         this.op = op;
     }
 
-    public void setRegistId(int registId) {
-        this.registId = registId;
+    public void setRegistIdAssign(int registId) {
+        this.registId_Assign = registId;
+    }
+    public void setRegistIdOperand(int registId){
+        this.registId_Operand = registId;
     }
 
     @Override

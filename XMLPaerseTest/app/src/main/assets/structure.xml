@@ -1,32 +1,27 @@
-<root>
-    <Scene id="1" image = "1" text="1" type="normal">
-        <Next id="2"/>
+    <Scene id="5" type="proc_branch" regist="0" condition="e">
+        <Next id="end" value="3"/>
+        <Next id="6" value="-1"/>
     </Scene>
-    <Scene id="2" image = "2" text="2" type="normal">
-        <Next id="3"/>
+    <Scene id="6" type="normal" image="2" text="6">
+        <Next id="7"/>
     </Scene>
-    <Scene id="3" type="branch">
-        <Next id="4"/>
+    <Scene id="7" type="branch">
+        <Next id="8"/>
+        <Next id="9"/>
+        <Next id="10"/>
+    </Scene>
+    <Scene id="8" type="proc" regist_assign="1" regist_operand="1" op="Or" value="1">
+        <Next id="11"/>
+    </Scene>
+    <Scene id="9" type="proc" regist_assign="1" regist_operand="1" op="Or" value="2">
+        <Next id="11"/>
+    </Scene>
+    <Scene id="10" type="proc" regist_assign="1" regist_operand="1" op="Or" value="4">
+        <Next id="11"/>
+    </Scene>
+    <Scene id="11" type="proc" regist_assign="0" regist_operand="0" op="Add" value="1">
+        <Next id="12"/>
+    </Scene>
+    <Scene id="end" type="normal" image="3" text="7">
         <Next id="5"/>
     </Scene>
-    <Scene id="4" op="Assign" regist="0" value="10" type="proc">
-        <Next id="6"/>
-    </Scene>
-    <Scene id="5" op="Assign" regist="0" value="20" type="proc">
-        <Next id="6"/>
-    </Scene>
-    <Scene id="6"  regist="0"  condition="e" type="proc_branch">
-        <Next id="7" value="10"/>
-        <Next id="8" value="20"/>
-        <Next id="9" value="0"/>
-    </Scene>
-    <Scene id="7" image = "2" text="3" type="normal">
-        <Next id="9"/>
-    </Scene>
-    <Scene id="8" image = "2" text="4" type="normal">
-        <Next id="9"/>
-    </Scene>
-    <Scene id="9" image = "2" text="5" type="normal">
-        <Next id="1"/>
-    </Scene>
-</root>
